@@ -34,7 +34,7 @@ public class ListenerDeTransacao {
         } catch (Exception exception){
 
             logger.error("Não foi possível transformar o retorno do kafka em uma transação e salvar no banco de dados; Mensagem do Kafka: "
-                    +eventoMensagem.getId()+"Causa Erro: "+exception.getCause().toString());
+                    +eventoMensagem.getId()+"Menssagem Erro: "+exception.getMessage());
 
         }
     }

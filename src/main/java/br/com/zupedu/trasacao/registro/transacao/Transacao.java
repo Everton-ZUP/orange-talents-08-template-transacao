@@ -53,4 +53,12 @@ public class Transacao {
     public Estabelecimento getEstabelecimento() {
         return estabelecimento;
     }
+
+    public String getIdMensagem() {
+        return idMensagem;
+    }
+
+    public Cartao getCartao() {
+        return cartao;
+    }
 }

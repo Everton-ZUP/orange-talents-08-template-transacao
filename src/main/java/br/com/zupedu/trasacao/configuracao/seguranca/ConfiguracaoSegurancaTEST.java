@@ -7,15 +7,13 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.annotation.web.configurers.oauth2.server.resource.OAuth2ResourceServerConfigurer;
 
 @Configuration
-@Profile("dev")
-public class ConfiguracaoSeguranca extends WebSecurityConfigurerAdapter {
+@Profile("test")
+public class ConfiguracaoSegurancaTEST extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable()
                 .authorizeRequests(authorizeRequest ->
-                        authorizeRequest
-                                 .antMatchers("/cartoes/*/transacoes").hasAuthority("SCOPE_transacoes:read")
-                                .anyRequest().authenticated()
-                ).oauth2ResourceServer(OAuth2ResourceServerConfigurer::jwt);
+                        authorizeRequest.anyRequest().permitAll()
+                );
     }
 }
