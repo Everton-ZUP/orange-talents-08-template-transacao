@@ -41,4 +41,16 @@ public class Transacao {
     public Long getId() {
         return id;
     }
+
+    public BigDecimal getValor() {
+        return valor;
+    }
+
+    public LocalDateTime getEfetivadaEm() {
+        return efetivadaEm;
+    }
+
+    public Estabelecimento getEstabelecimento() {
+        return estabelecimento;
+    }
 }

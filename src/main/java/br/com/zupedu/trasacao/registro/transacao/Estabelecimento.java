@@ -17,4 +17,16 @@ public class Estabelecimento {
 
     public Estabelecimento() {
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
 }
